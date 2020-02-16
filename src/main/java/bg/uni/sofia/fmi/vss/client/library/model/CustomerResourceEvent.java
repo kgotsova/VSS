@@ -2,6 +2,7 @@ package bg.uni.sofia.fmi.vss.client.library.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.time.Instant;
 import java.time.temporal.ValueRange;
@@ -11,6 +12,7 @@ import java.util.Map;
 import static java.util.Objects.*;
 import static org.apache.commons.collections4.MapUtils.emptyIfNull;
 
+@SuppressFBWarnings("BX_UNBOXING_IMMEDIATELY_REBOXED")
 public class CustomerResourceEvent {
 
     private static final ValueRange ALLOWED_EVENT_PRIORITY_RANGE = ValueRange.of(1, 1000);
